@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./public/ss-icon.jpg" type="image/jpg" sizes="16x16">
+    <title>Soltex Systems - Contact Us</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+<!-- Custom styles for this template -->
+<link href="index.css" rel="stylesheet">
+<script src="https://kit.fontawesome.com/6555d3ecba.js" crossorigin="anonymous"></script>
+
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav a{
+    font-family: 'Montserrat', sans-serif !important;    
+    font-size: 14px !important;
+    color:black;
+    line-height: 1.42857143 !important;
+}
+
+section{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fff;
+    margin-top: 100px;
+    /* background: #112d42; */
+}
+section::before{
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    width: 50%;
+    height:100%;
+    background: #fff;
+    /* background: #03a9f4; */
+}
+
+section .container{
+    position: relative;
+    min-width: 1100px;
+    min-height: 600px;
+    display:flex;
+    z-index: 1000;
+}
+section .container .contactinfo{
+    position: absolute;
+    top:40px;
+    width:350px;
+    height: (100%-80px);
+    background: #0f3959;
+    z-index:1;
+    padding: 40px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 20px 20px rgba(0,0,0,0.2);
+}
+section .container .contactinfo h2{
+    color:#fff;
+    font-size: 24px;
+    font-weight: 500;
+}
+section .container .contactinfo .info{
+    position: relative;
+    margin: 20px 0;
+}
+section .container .contactinfo .info li{
+    position: relative;
+    list-style: none;
+    display: flex;
+    margin: 20px 0;
+    cursor: pointer;
+    align-items: flex-start;
+}
+
+section .container .contactinfo .info li span:nth-child(1){
+    width: 30px;
+    min-width: 30px;
+    
+}
+section .container .contactinfo .info li span:nth-child(1) i{
+    max-width: 100%;
+    filter: invert(1);
+    opacity: 0.5;
+   
+
+}
+
+
+section .container .contactinfo .info li span:nth-child(2) a{
+    max-width: 100%;
+   text-decoration: none;
+color: #fff;
+}
+
+
+section .container .contactinfo .info li span:nth-child(2){
+    color: #fff;
+    margin-left: 10px;
+    font-weight: 300;
+    opacity: 0.5; 
+}
+section .container .contactinfo .info li:hover span:nth-child(1) i,
+section .container .contactinfo .info li:hover span:nth-child(2){
+    opacity: 1;
+} 
+
+section .container .contactinfo .sci{
+    position: relative;
+    display: flex;
+    
+}
+section .container .contactinfo .sci li{
+    list-style: none;
+    margin-right: 15px;
+}
+section .container .contactinfo .sci li a{
+    text-decoration: none;
+}
+section .container .contactinfo .sci li a i{
+    color: #fff;
+    opacity: 0.5;
+}
+section .container .contactinfo .sci li:hover a i{
+    opacity: 1;
+}
+section .container .contactForm{
+    position: absolute;
+    padding: 70px 50px;
+    background: #fff;
+    margin-left: 150px;
+    padding-left: 250px;
+    height: 100%;
+    width: calc(100% - 150px);
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5);
+}
+section .container .contactForm h2{
+    color: #0f3959;
+    font-size: 24px;
+    font-weight: 500;
+}
+section .container .contactForm .formBox{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+section .container .contactForm .formBox .inputBox{
+    position: relative;
+    margin:0 0 35px 0;
+}
+section .container .contactForm .formBox .inputBox.w50{
+    width:47%;
+}
+section .container .contactForm .formBox .inputBox.w100{
+    width:100%;
+}
+section .container .contactForm .formBox .inputBox input,
+section .container .contactForm .formBox .inputBox textarea{
+    width: 100% !important;
+    padding: 5px 0;
+    resize: none;
+    font-size: 18px;
+    font-weight: 300;
+    color: #333;
+    border: none;
+    border-bottom: 1px solid #777;
+    outline: none;
+}
+section .container .contactForm .formBox .inputBox textarea{
+    min-height: 120px;
+}
+section .container .contactForm .formBox .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #333;
+    transition: 0.5s;
+    pointer-events: none;
+}
+section .container .contactForm .formBox .inputBox input:focus ~ span,
+section .container .contactForm .formBox .inputBox textarea:focus ~span,
+section .container .contactForm .formBox .inputBox input:valid ~ span,
+section .container .contactForm .formBox .inputBox textarea:valid ~span
+{
+    transform: translateY(-20px);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color:  #0f3959;
+}
+/* #ff568c; */
+section .container .contactForm .formBox .inputBox input[type="submit"]{
+    position: relative;
+    cursor:pointer;
+    background: #0f3959;
+    color:#fff;
+    border:none;
+    max-width: 150px;
+    padding:12px;
+}
+section .container .contactForm .formBox .inputBox input[type="submit"]:hover{
+    background: #3289a8;
+}
+/* for making it responsive */
+
+@media (max-width: 1200px){
+    section .container{
+        width:90%;
+        min-width: auto;
+        margin:20px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    }
+    section .container .contactinfo{
+        top: 0;
+        height: 550px;
+        position:relative;
+        box-shadow: none;
+    }
+    section .container .contactForm{
+        position: relative;
+        width: calc(100% -350px);
+        padding-left: 0;
+        margin-left: 0;
+        padding:40px;
+        height: 550px;
+        box-shadow: none;
+    }
+
+}
+@media (max-width:991px)
+{
+    section{
+        background: #fff;
+    }
+    section::before{
+        display: none;
+    }
+    section .container{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    section .container .contactForm{
+        width: 100%;
+        height:auto;
+
+    }
+    section .container .contactinfo{
+        width:100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+    }
+    section .container .contactinfo ul.sci{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+@media (max-width:600px)
+{
+    section .container .contactForm{
+        padding: 25px;
+    }
+    section .container .contactinfo{
+        padding: 25px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    section .container .contactinfo ul.sci{
+        margin-top: 40px;
+    }
+    section .container .contactForm .formBox .inputBox.w50{
+        width:100%;
+    }
+
+
+}
+
+
+/*Submit Handler*/
+#status {
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+#status.success {
+  background-color: rgb(211, 250, 153);
+  animation: status 4s ease forwards;
+}
+#status.error {
+  background-color: rgb(250, 129, 92);
+  color: white;
+  animation: status 4s ease forwards;
+}
+@keyframes status {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  90% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+
+</style>
+
+<!--Font Awesome-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+
+
+<!--Nav Bar-->
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+ 
+  <a class="navbar-brand" href="./index.html"><img src="./public/ss-logo.png" alt="Soltex Systems" width="120px" height="80px" srcset="" style="padding-left: 10px;"></a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02" >
+    <ul class="nav navbar-nav ">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">ABOUT</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="services.html">SERVICES</a>
+      </li>
+     
+      <li class="nav-item">
+        <a class="nav-link" href="careers.html">CAREERS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contact.html">CONTACT US</a>
+      </li>
+    </ul>
+    
+  </div>
+</nav>
+
+<!-- actual form section -->
+<section>
+  <div class="container">
+      <div class="contactinfo">
+          <div>
+              <h2 >Contact Info</h2>
+              <ul class="info">
+                  <li>
+                      <span><i class="fas fa-map-marker-alt"></i></span>
+                      <span>1501 Main Street, STE 16, Tewksbury<br>
+                          Massachussets<br>
+                          01876 
+                      </span>
+                  </li>
+                  <li>
+                      <span><i class="fas fa-envelope-open-text"></i></span>
+                      <span>
+                        <a href="mailto:HR@soltexsystems.com">HR@soltexsystems.com</a>
+                      </span>
+                  </li>
+                  <li>
+                      <span><i class="fas fa-phone-volume"></i></span>
+                      <span>(978)703 0808
+                      </span>
+                  </li>
+              </ul>
+          </div>
+          <ul class="sci">
+              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          </ul>  
+      </div>
+
+    <form 
+            method="POST"
+            id="contactus-form"
+            action="sendEmail.php"
+            
+            >
+           
+                 
+            
+      <div class="contactForm">
+       
+          <h2>Send a Message</h2>
+          <div class="formBox">
+            <div class="inputBox w50">
+                <input type="text" name="fname" id="fname" required>
+                <span>First Name</span>
+            </div>
+            <div class="inputBox w50">
+                <input type="text" name="lname" id="lname" required>
+                <span>Last Name</span>
+            </div>
+            <div class="inputBox w50">
+                <input type="email" name="email" id="email" maxlength="50" required>
+                <span>Email address</span>
+            </div>
+            <div class="inputBox w50">
+                <input type="tel" name="tel" id="tel" maxlength="15" required >
+                <span>Mobile Number</span>
+            </div>
+            <div class="inputBox w100">
+                <textarea name="message" id="message" required></textarea>
+                <span>Write your message here....</span>
+            </div>
+            <div class="inputBox w100">
+                    <p id="status" class="mb-1"></p>
+                    <input type="submit"  id ="send" value="Send" >
+                   
+              
+            </div>
+           
+            <input type="hidden" name="_subject" value="A new contact request has received">            
+            <input type="hidden" name="_next" value="./thanks.html" >
+            <input type="text" name="_gotcha" style="display:none" >
+        </div>
+    </div>
+    </form>
+  </div>
+</section>
+
+    
+
+<!-- Go to Top -->
+<div class="totop float-end" >
+    <a href="#"
+       class="btn btn-link btn-floating btn-lg text-dark">
+         <i class="fa fa-arrow-up "></i>
+    </a>
+</div><!-- Go to Top -->
+<br><br><br>
+
+<!-- FOOTER -->
+
+  
+<footer class="page-footer font-small black   py-5">
+    
+      
+    <div id="siteInfo" class="text-center">
+            <span class="site-address">1501 Main Street,  STE 16, Tewksbury,  </span>
+            <span class="site-city"> Massachussets, 01876. </span>
+             <span class="site-phone"> <a href="tel:978-703-0808"> PH: (978)703 0808, </a></span>
+             <a href="mailto:HR@soltexsystems.com" class="site-email">	<span>HR@soltexsystems.com</span>
+             </a>
+     </div>
+  
+  </footer> <!-- FOOTER -->  
+   
+
+   
+    
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+
+
+<!--
+<script src="./formSuccess.js" type="module"></script>
+-->
+    </body>
+    
+</html> 
