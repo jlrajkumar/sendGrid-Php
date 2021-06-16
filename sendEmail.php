@@ -14,10 +14,10 @@
     $phone = $_POST['tel'];
     $message = $_POST['message']; 
 
-    $contactDetails .= "Name: ".$fname. "<br>" ."<br>" ; 
-    $contactDetails .= "Email: ".$email. "<br>" ."<br>" ; 
-    $contactDetails .= "Phone: ".$phone.  "<br>" ."<br>"; 
-    $contactDetails .= "Message: ".$message;
+    $contactDetails .= "<strong> Name: </strong>".$fname. "<br>" ."<br>" ; 
+    $contactDetails .= "<strong> Email: </strong>".$email. "<br>" ."<br>" ; 
+    $contactDetails .= "<strong> Phone: </strong>".$phone.  "<br>" ."<br>"; 
+    $contactDetails .= "<strong> Message: </strong>".$message;
     
 
 	// create new sendgrid mail
@@ -38,10 +38,10 @@
 	// add our email body content
 //$email->addContent( "text/plain", "Name : " . $fname . "\r\nEmail: " . $email. "\r\nMessage: " .$message );
 
-$email->addContent( "text/plain", "Get the client details here ");
+$email->addContent( "text/plain", $contactDetails);
 
     $email->addContent(
-	    "text/html", "<strong> $contactDetails</strong>"
+	    "text/html",  $contactDetails
 	);
   
 
